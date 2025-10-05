@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl05poia3xdgi"]
+
+[ext_resource type="Texture2D" uid="uid://cymogdas5k618" path="res://assets/popup_window.png" id="2_ofmyw"]
+
+[node name="TextureRect" type="TextureRect"]
+offset_right = 740.0
+offset_bottom = 640.0
+scale = Vector2(5, 5)
+texture = ExtResource("2_ofmyw")

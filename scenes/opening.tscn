@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmedbpon2ydds"]
+
+[ext_resource type="Script" uid="uid://vjsqfbqv3ra6" path="res://scripts/opening.gd" id="1_pk062"]
+
+[node name="opening" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pk062")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 132.0
+offset_right = 1919.0
+offset_bottom = 269.0
+theme_override_colors/font_color = Color(0.898275, 2.59906e-06, 1.2514e-06, 1)
+theme_override_font_sizes/font_size = 100
+text = "WARNING"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 476.0
+offset_right = 1918.0
+offset_bottom = 964.0
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 50
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.02
+
+[node name="continueTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="continueTimer" to="." method="_on_continue_timer_timeout"]

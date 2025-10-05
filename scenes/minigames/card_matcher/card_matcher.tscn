@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbijsgevddhq3"]
+
+[ext_resource type="Script" uid="uid://dtb3fmku6ieaf" path="res://card_matcher.gd" id="1_s4edv"]
+[ext_resource type="Texture2D" uid="uid://cb1q7tomq7adn" path="res://assets/card_matcher/card_pc_bg.png" id="2_i6dc2"]
+
+[node name="CardMatcher" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_s4edv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 40.0
+offset_right = 3976.0
+offset_bottom = 2298.0
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("2_i6dc2")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 184.0
+offset_right = 1776.0
+offset_bottom = 880.0
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 3
+
+[node name="close" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1640.0
+offset_top = 56.0
+offset_right = 1688.0
+offset_bottom = 104.0
+flat = true

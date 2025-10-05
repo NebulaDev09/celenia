@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bmm1k7w6erpqa"
+path="res://.godot/imported/Tejas general use song 16th note rythmn.wav-f324545758e02d9a2ba720f194f97200.sample"
+
+[deps]
+
+source_file="res://assets/Tejas general use song 16th note rythmn.wav"
+dest_files=["res://.godot/imported/Tejas general use song 16th note rythmn.wav-f324545758e02d9a2ba720f194f97200.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

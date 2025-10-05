@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgu12yarojlx4"]
+
+[ext_resource type="Script" uid="uid://byghe62052wea" path="res://scripts/spectrograph.gd" id="1_ql5yt"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ql5yt")
+
+[node name="play_pause" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1472.0
+offset_top = 944.0
+offset_right = 1944.0
+offset_bottom = 1080.0
+theme_override_font_sizes/font_size = 50
+text = "Play/Pause"
+flat = true
+
+[node name="scan" type="Button" parent="."]
+layout_mode = 0
+offset_left = 832.0
+offset_top = 944.0
+offset_right = 1505.0
+offset_bottom = 1080.0
+theme_override_font_sizes/font_size = 50
+text = "SCAN FOR ABNORMALITIES "
+flat = true
+
+[node name="successiveAbnormality" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+
+[node name="abnormality" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 48.0
+offset_right = 1520.0
+offset_bottom = 256.0
+theme_override_font_sizes/font_size = 100
+
+[node name="abnormalityOnScreen" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[connection signal="pressed" from="play_pause" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="scan" to="." method="_on_scan_pressed"]
+[connection signal="timeout" from="successiveAbnormality" to="." method="_on_successive_abnormality_timeout"]
+[connection signal="timeout" from="abnormality" to="." method="_on_abnormality_timeout"]

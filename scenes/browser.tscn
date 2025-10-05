@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://deib0f61br667"]
+
+[ext_resource type="Script" uid="uid://c8ry14y3cnqub" path="res://scenes/browser.gd" id="1_1qmiu"]
+[ext_resource type="Texture2D" uid="uid://12ckwy25qj1o" path="res://assets/browser.png" id="1_y4bje"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1qmiu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tcvq3"]
+
+[node name="browser" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1qmiu")
+
+[node name="browser" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_y4bje")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 536.0
+offset_top = 608.0
+offset_right = 1336.0
+offset_bottom = 672.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 624.0
+offset_right = 1432.0
+offset_bottom = 680.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1qmiu")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_tcvq3")

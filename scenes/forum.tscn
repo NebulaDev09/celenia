@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://djjhmivyq7wpf"]
+
+[ext_resource type="Script" uid="uid://wboi6q3cufeg" path="res://scripts/forum.gd" id="1_ft0yj"]
+
+[node name="forum" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ft0yj")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 694.0
+offset_top = 3.0
+offset_right = 1254.0
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 100
+text = "Collaborate"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_top = 224.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="VScrollBar" type="VScrollBar" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VScrollBar"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

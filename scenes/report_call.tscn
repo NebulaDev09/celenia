@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://ptxuf5hjwirc"]
+
+[ext_resource type="Texture2D" uid="uid://bahgaylh3tnuj" path="res://assets/popup_report.png" id="1_kab3i"]
+[ext_resource type="Script" uid="uid://blbs1pb885w5l" path="res://scenes/report_call.gd" id="2_f5hmr"]
+[ext_resource type="FontFile" uid="uid://oia3rwu8wi0l" path="res://assets/SweetNovember-n6O1.ttf" id="2_ts7rd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f5hmr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8pch8"]
+
+[node name="popup_report" type="TextureRect"]
+offset_right = 740.0
+offset_bottom = 640.0
+texture = ExtResource("1_kab3i")
+stretch_mode = 3
+script = ExtResource("2_f5hmr")
+
+[node name="Label" type="Label" parent="."]
+z_index = 10
+layout_mode = 0
+offset_left = 112.0
+offset_top = 248.0
+offset_right = 624.0
+offset_bottom = 360.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ts7rd")
+theme_override_font_sizes/font_size = 75
+text = "Would you like to report this call?"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 440.0
+offset_right = 256.0
+offset_bottom = 520.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_f5hmr")
+text = "Yes"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 440.0
+offset_right = 416.0
+offset_bottom = 520.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8pch8")
+text = "No"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

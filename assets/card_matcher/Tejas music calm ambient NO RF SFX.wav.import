@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://chogiruhtg2gk"
+path="res://.godot/imported/Tejas music calm ambient NO RF SFX.wav-bdb7f19eadd20c36a015a4df42fdcb6a.sample"
+
+[deps]
+
+source_file="res://assets/card_matcher/Tejas music calm ambient NO RF SFX.wav"
+dest_files=["res://.godot/imported/Tejas music calm ambient NO RF SFX.wav-bdb7f19eadd20c36a015a4df42fdcb6a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckjewg0un6p5o"]
+
+[ext_resource type="Texture2D" uid="uid://bnoggv1sgigth" path="res://assets/fileSystem.png" id="1_xu4pm"]
+[ext_resource type="Script" uid="uid://26v12kp0dqc4" path="res://file_system.gd" id="2_qx57w"]
+
+[node name="fileSystem" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xu4pm")
+script = ExtResource("2_qx57w")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1128.0
+offset_top = 184.0
+offset_right = 1368.0
+offset_bottom = 239.0
+theme_override_font_sizes/font_size = 40
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1136.0
+offset_top = 328.0
+offset_right = 1376.0
+offset_bottom = 383.0
+theme_override_font_sizes/font_size = 40
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1128.0
+offset_top = 472.0
+offset_right = 1368.0
+offset_bottom = 527.0
+theme_override_font_sizes/font_size = 40
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1120.0
+offset_top = 608.0
+offset_right = 1360.0
+offset_bottom = 663.0
+theme_override_font_sizes/font_size = 40
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1136.0
+offset_top = 720.0
+offset_right = 1376.0
+offset_bottom = 775.0
+theme_override_font_sizes/font_size = 40

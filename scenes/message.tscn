@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://c43kqd8gdbr23"]
+
+[ext_resource type="Script" uid="uid://ccw21m8tdjpn8" path="res://scripts/message.gd" id="1_11qlq"]
+[ext_resource type="Texture2D" uid="uid://bj31xt6or68ky" path="res://assets/Untitled13-removebg-preview.png" id="2_x5w8s"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 448.0
+offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_11qlq")
+
+[node name="message" type="RichTextLabel" parent="."]
+layout_mode = 2
+offset_left = 234.0
+offset_top = 82.0
+offset_right = 1940.0
+offset_bottom = 284.0
+theme_override_font_sizes/normal_font_size = 85
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 42.0
+offset_top = 82.0
+offset_right = 542.0
+offset_bottom = 582.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_x5w8s")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="name" type="Label" parent="."]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 12.0
+offset_right = 448.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 40
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

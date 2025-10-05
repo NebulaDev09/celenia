@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://drhvutov1w30j"]
+
+[ext_resource type="Script" uid="uid://blumn03is1esa" path="res://scenes/transcription_1.gd" id="1_kf5vx"]
+[ext_resource type="AudioStream" uid="uid://dbqalhbigfky2" path="res://assets/Tejas music ending.wav" id="2_2g85p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jjctd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_telu2"]
+
+[node name="transcription" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kf5vx")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.001
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1924.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 100
+text = "TRANSCRIPT"
+horizontal_alignment = 1
+
+[node name="transcript" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 312.0
+offset_right = 1920.0
+offset_bottom = 960.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jjctd")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_telu2")
+editable = false
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 320.0
+offset_right = 1232.0
+offset_bottom = 784.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_2g85p")
+volume_db = 10.0
+autoplay = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
